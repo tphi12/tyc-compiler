@@ -205,23 +205,15 @@ LINE_COMMENT: '//' ~[\r\n]* -> skip;
 IDENTIFIER: [a-zA-Z_][a-zA-Z0-9_]*;
 
 FLOAT_LITERAL
-    : DIGIT+ '.' DIGIT* EXPONENT?
-    | '.' DIGIT+ EXPONENT?
-    | DIGIT+ EXPONENT
+    : '-'? DIGIT+ '.' DIGIT* EXPONENT?
+    | '-'? '.' DIGIT+ EXPONENT?
+    | '-'? DIGIT+ EXPONENT
     ;
 
-INTEGER_LITERAL: DIGIT+;
-
-STRING_LITERAL
-    : '"' (STR_CHAR | ESC_SEQ)* '"'
-    {
-        # Strip the surrounding quotes from the token text
-        self.text = self.text[1:-1]
-    }
-    ;
+INTEGER_LITERAL: '-'? DIGIT+;
 
 ILLEGAL_ESCAPE
-    : '"' (STR_CHAR | ESC_SEQ)* '\\' ~[bfrnt"\\]
+    : '"' (STR_CHAR | ESC_SEQ)* '\\' ~[bfrnt"\\\r\n]
     {
         # Strip the opening quote
         self.text = self.text[1:]
@@ -233,6 +225,14 @@ UNCLOSE_STRING
     {
         # Strip the opening quote
         self.text = self.text[1:]
+    }
+    ;
+
+STRING_LITERAL
+    : '"' (STR_CHAR | ESC_SEQ)* '"'
+    {
+        # Strip the surrounding quotes from the token text
+        self.text = self.text[1:-1]
     }
     ;
 
