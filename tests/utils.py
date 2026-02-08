@@ -67,7 +67,11 @@ class Tokenizer:
             while True:
                 token = lexer.nextToken()
                 if token.type == -1:  # EOF
+<<<<<<< HEAD
                     tokens.append("<EOF>")
+=======
+                    tokens.append("EOF")
+>>>>>>> 78e1f02 (heeeeee)
                     break
                 tokens.append(token.text if token.text else "")
         except Exception as e:
@@ -100,6 +104,7 @@ class Parser:
             tree = parser.program()
             return "success"
         except Exception as e:
+<<<<<<< HEAD
             return str(e)
 
 
@@ -129,4 +134,6 @@ class Checker:
             self.checker.check_program(self.ast)
             return "Static checking passed"
         except Exception as e:
+=======
+>>>>>>> 78e1f02 (heeeeee)
             return str(e)
