@@ -278,7 +278,7 @@ class TyCLexer(Lexer):
 
     def emit(self):
         tk = self.type
-        if tk == self.UNCLOSE_STRING:       
+        if tk == self.UNCLOSE_STRING:      
             result = super().emit();
             raise UncloseString(result.text);
         elif tk == self.ILLEGAL_ESCAPE:
@@ -286,7 +286,7 @@ class TyCLexer(Lexer):
             raise IllegalEscape(result.text);
         elif tk == self.ERROR_CHAR:
             result = super().emit();
-            raise ErrorToken(result.text); 
+            raise ErrorToken(result.text);
         else:
             return super().emit();
 
