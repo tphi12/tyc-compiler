@@ -68,10 +68,14 @@ class Tokenizer:
                 token = lexer.nextToken()
                 if token.type == -1:  # EOF
 <<<<<<< HEAD
+<<<<<<< HEAD
                     tokens.append("<EOF>")
 =======
                     tokens.append("EOF")
 >>>>>>> 78e1f02 (heeeeee)
+=======
+                    tokens.append("EOF")
+>>>>>>> bcfbb99 (aaaaaa)
                     break
                 tokens.append(token.text if token.text else "")
         except Exception as e:
