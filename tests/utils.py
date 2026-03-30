@@ -67,6 +67,7 @@ class Tokenizer:
             while True:
                 token = lexer.nextToken()
                 if token.type == -1:  # EOF
+                    tokens.append("EOF")
 <<<<<<< HEAD
 <<<<<<< HEAD
                     tokens.append("<EOF>")
