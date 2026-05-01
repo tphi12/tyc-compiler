@@ -319,6 +319,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_program
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterProgram" ):
+                listener.enterProgram(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitProgram" ):
+                listener.exitProgram(self)
+
 
 
 
@@ -394,6 +402,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_structDecl
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructDecl" ):
+                listener.enterStructDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructDecl" ):
+                listener.exitStructDecl(self)
+
 
 
 
@@ -453,6 +469,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_structMember
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructMember" ):
+                listener.enterStructMember(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructMember" ):
+                listener.exitStructMember(self)
+
 
 
 
@@ -507,6 +531,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_funcDecl
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFuncDecl" ):
+                listener.enterFuncDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFuncDecl" ):
+                listener.exitFuncDecl(self)
 
 
 
@@ -568,6 +600,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_returnType
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReturnType" ):
+                listener.enterReturnType(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReturnType" ):
+                listener.exitReturnType(self)
+
 
 
 
@@ -623,6 +663,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_primitiveType
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrimitiveType" ):
+                listener.enterPrimitiveType(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrimitiveType" ):
+                listener.exitPrimitiveType(self)
+
 
 
 
@@ -671,6 +719,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_paramList
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParamList" ):
+                listener.enterParamList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParamList" ):
+                listener.exitParamList(self)
 
 
 
@@ -722,6 +778,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_param
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParam" ):
+                listener.enterParam(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParam" ):
+                listener.exitParam(self)
+
 
 
 
@@ -760,6 +824,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_typeSpec
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeSpec" ):
+                listener.enterTypeSpec(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeSpec" ):
+                listener.exitTypeSpec(self)
 
 
 
@@ -843,6 +915,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_stmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStmt" ):
+                listener.enterStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStmt" ):
+                listener.exitStmt(self)
 
 
 
@@ -965,6 +1045,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_varDecl
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVarDecl" ):
+                listener.enterVarDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVarDecl" ):
+                listener.exitVarDecl(self)
+
 
 
 
@@ -1074,6 +1162,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_exprList
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprList" ):
+                listener.enterExprList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprList" ):
+                listener.exitExprList(self)
+
 
 
 
@@ -1136,6 +1232,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_blockStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBlockStmt" ):
+                listener.enterBlockStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBlockStmt" ):
+                listener.exitBlockStmt(self)
 
 
 
@@ -1215,6 +1319,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_ifStmt
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIfStmt" ):
+                listener.enterIfStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIfStmt" ):
+                listener.exitIfStmt(self)
+
 
 
 
@@ -1279,6 +1391,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_whileStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWhileStmt" ):
+                listener.enterWhileStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWhileStmt" ):
+                listener.exitWhileStmt(self)
 
 
 
@@ -1348,6 +1468,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_forStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForStmt" ):
+                listener.enterForStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForStmt" ):
+                listener.exitForStmt(self)
 
 
 
@@ -1435,6 +1563,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_forInit
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForInit" ):
+                listener.enterForInit(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForInit" ):
+                listener.exitForInit(self)
+
 
 
 
@@ -1513,6 +1649,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_forCondition
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForCondition" ):
+                listener.enterForCondition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForCondition" ):
+                listener.exitForCondition(self)
+
 
 
 
@@ -1550,6 +1694,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_forUpdate
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForUpdate" ):
+                listener.enterForUpdate(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForUpdate" ):
+                listener.exitForUpdate(self)
 
 
 
@@ -1619,6 +1771,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_switchStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSwitchStmt" ):
+                listener.enterSwitchStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSwitchStmt" ):
+                listener.exitSwitchStmt(self)
 
 
 
@@ -1690,6 +1850,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_caseClause
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCaseClause" ):
+                listener.enterCaseClause(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCaseClause" ):
+                listener.exitCaseClause(self)
 
 
 
@@ -1767,6 +1935,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_breakStmt
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBreakStmt" ):
+                listener.enterBreakStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBreakStmt" ):
+                listener.exitBreakStmt(self)
+
 
 
 
@@ -1804,6 +1980,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_continueStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterContinueStmt" ):
+                listener.enterContinueStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitContinueStmt" ):
+                listener.exitContinueStmt(self)
 
 
 
@@ -1846,6 +2030,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_returnStmt
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReturnStmt" ):
+                listener.enterReturnStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReturnStmt" ):
+                listener.exitReturnStmt(self)
 
 
 
@@ -1895,6 +2087,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_exprStmt
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprStmt" ):
+                listener.enterExprStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprStmt" ):
+                listener.exitExprStmt(self)
+
 
 
 
@@ -1930,6 +2130,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_expr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExpr" ):
+                listener.enterExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExpr" ):
+                listener.exitExpr(self)
 
 
 
@@ -1971,6 +2179,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_assignExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssignExpr" ):
+                listener.enterAssignExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssignExpr" ):
+                listener.exitAssignExpr(self)
 
 
 
@@ -2025,6 +2241,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_logicalOrExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLogicalOrExpr" ):
+                listener.enterLogicalOrExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLogicalOrExpr" ):
+                listener.exitLogicalOrExpr(self)
 
 
 
@@ -2081,6 +2305,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_logicalAndExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLogicalAndExpr" ):
+                listener.enterLogicalAndExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLogicalAndExpr" ):
+                listener.exitLogicalAndExpr(self)
 
 
 
@@ -2143,6 +2375,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_equalityExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEqualityExpr" ):
+                listener.enterEqualityExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEqualityExpr" ):
+                listener.exitEqualityExpr(self)
 
 
 
@@ -2223,6 +2463,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_relationalExpr
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRelationalExpr" ):
+                listener.enterRelationalExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRelationalExpr" ):
+                listener.exitRelationalExpr(self)
+
 
 
 
@@ -2289,6 +2537,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_additiveExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAdditiveExpr" ):
+                listener.enterAdditiveExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAdditiveExpr" ):
+                listener.exitAdditiveExpr(self)
 
 
 
@@ -2363,6 +2619,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_multiplicativeExpr
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMultiplicativeExpr" ):
+                listener.enterMultiplicativeExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMultiplicativeExpr" ):
+                listener.exitMultiplicativeExpr(self)
+
 
 
 
@@ -2433,6 +2697,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_unaryExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterUnaryExpr" ):
+                listener.enterUnaryExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitUnaryExpr" ):
+                listener.exitUnaryExpr(self)
 
 
 
@@ -2544,6 +2816,14 @@ class TyCParser ( Parser ):
         def getRuleIndex(self):
             return TyCParser.RULE_postfixExpr
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPostfixExpr" ):
+                listener.enterPostfixExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPostfixExpr" ):
+                listener.exitPostfixExpr(self)
+
 
 
 
@@ -2648,6 +2928,14 @@ class TyCParser ( Parser ):
 
         def getRuleIndex(self):
             return TyCParser.RULE_primaryExpr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrimaryExpr" ):
+                listener.enterPrimaryExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrimaryExpr" ):
+                listener.exitPrimaryExpr(self)
 
 
 
